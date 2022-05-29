@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font Awesome CSS Link -->
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.min.css" />
+
+    <!-- Boxicons CSS Link -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Link Chart -->
+    <link rel= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css"/>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+
+    <!-- Link  Chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Web Admin</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-xxl navbar-light shadow p-2" style="background-color: #A370F7;">
+      <div class="container-fluid">
+          <h4>
+              <i class="fa-solid fa-face-laugh-squint mt-2" style="color: #F3AD27;"></i>
+          </h4>
+          <a class="navbar-brand ms-2" href="dashboard.html">Asun Durian Denpasar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="d-flex ms-auto">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn bg-primary" type="submit"><i class="fa-solid fa-magnifying-glass text-white"></i></button>
+          </form>
+          <div class="icon ms-3 text-dark">
+              <h5>
+              <i class="fa-solid fa-bell ms-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notifikasi"></i>
+              <i class="fa-solid fa-envelope ms-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Email"></i>
+              </h5>
+          </div>
+          <div class="topbar ms-4"></div>
+              <div class="dropdown iconUser ms-2 d-inline-flex">
+                  <a id="userDropdown" class="nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="mt-2 nama">Giovanni Yuvens Setiawan</span>  
+                      <img class="rounded-circle ms-3" src="img/undraw_profile.svg" alt="" style="width: 35px;">
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user ms-2 me-3"></i>Profile</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear ms-2 me-3"></i>Settings</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-ellipsis ms-2 me-3"></i>Activity Log</a></li>
+                      <hr>
+                      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket ms-2 me-3"></i>Logout</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>  
+  </nav>
+  <!-- end navbar -->
+
+  <!-- Vertical Navbar -->
+  <div class="row rounded-1">
+      <div class="col-md-2 p-4 sidebar collapse navbar-collapse" style="background-color: #1F2937;" id="sidebar">
+          <ul class="nav flex-column">
+          <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="index.html"><i class="fa-solid fa-gauge me-3 text-secondary"></i>Dashboard</a>
+          </li>
+          <hr class="text-white">
+          <li class="nav-item">
+              <a class="nav-link text-white" href="product.html"><i class="fa-solid fa-store me-3 text-secondary"></i>Product</a>
+          </li>
+          <hr class="text-white">
+          <li class="nav-item">
+              <a class="nav-link text-white" href="charts.html"><i class="fa-solid fa-chart-column me-3 text-secondary"></i>Charts</a>
+          </li>
+          <hr class="text-white">
+          <li class="nav-item">
+              <a class="nav-link text-white" href="table.html"><i class="fa-solid fa-table-cells me-3 text-secondary"></i>Table</a>
+          </li>
+          <hr class="text-white">
+          <li class="nav-item">
+              <a class="nav-link text-white" href="settings.html"><i class="fa-solid fa-gear me-3 text-secondary"></i>Settings</a>
+          </li>
+          <hr class="text-white">
+          </ul>
+      </div>
+      <div class="col-md-2 p-4 sidebar2" style="background-color: #1F2937;" id="sidebar">
+          <ul class="nav flex-column">
+          <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="index.html"><i class="fa-solid fa-gauge me-3 text-secondary"></i>Dashboard</a>
+          </li>
+          <hr class="text-white">
+          <li class="nav-item">
+              <a class="nav-link text-white" href="product.html"><i class="fa-solid fa-store me-3 text-secondary"></i>Product</a>
+          </li>
+          <hr class="text-white">
+          <li class="nav-item">
+              <a class="nav-link text-white" href="charts.html"><i class="fa-solid fa-chart-column me-3 text-secondary"></i>Charts</a>
+          </li>
+          <hr class="text-white">
+          <li class="nav-item">
+              <a class="nav-link text-white" href="table.html"><i class="fa-solid fa-table-cells me-3 text-secondary"></i>Table</a>
+          </li>
+          <hr class="text-white">
+          <li class="nav-item">
+              <a class="nav-link text-white" href="settings.html"><i class="fa-solid fa-gear me-3 text-secondary"></i>Settings</a>
+          </li>
+          <hr class="text-white">
+          </ul>
+      </div>
+    <!-- end Vertical Navbar -->
+
+
+
+      <!-- Dashboard -->
+      <div class="col-xl-9 mt-3 ms-3">
+        <h1><i class="fa-solid fa-gauge me-3"></i>Dasboard</h1>
+        <hr>
+        <!-- Product Dashboard -->
+        <div class="row justify-content-around">
+          <div class="col-lg-3 mb-5 me-3">
+            <div class="col-md-3">
+              <div class="card" style="width: 18rem;">
+                <div class="spk-img">
+                  <img src="img/P8.png" class="card-img-top" alt="">
+                  <ul>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=6285792881610"><i class="fa-brands fa-whatsapp"></i></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Asun-Durian-Denpasar-102492179104839"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/asundurian.denpasar/"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-text">Pancake Isi 8</h5>
+                  <p class="card-text">STOCK : <b class="stock text-success">345</b></p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 mb-5 me-3">
+            <div class="col-md-3">
+              <div class="card" style="width: 18rem;">
+                <div class="spk-img">
+                  <img src="img/P21.png" class="card-img-top" alt="">
+                  <ul>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=6285792881610"><i class="fa-brands fa-whatsapp"></i></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Asun-Durian-Denpasar-102492179104839"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/asundurian.denpasar/"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-text">Pancake Isi 21</h5>
+                  <p class="card-text">STOCK : <b class="stock text-success">215</b></p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 mb-5 me-3">
+            <div class="col-md-3">
+              <div class="card" style="width: 18rem;">
+                <div class="spk-img">
+                  <img src="img/Durpas.png" class="card-img-top" alt="">
+                  <ul>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=6285792881610"><i class="fa-brands fa-whatsapp"></i></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Asun-Durian-Denpasar-102492179104839"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/asundurian.denpasar/"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-text">Durian Kupas Medan</h5>
+                  <p class="card-text">STOCK : <b class="stock text-success">127</b></p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-evenly">
+          <div class="col-lg-3 mb-5 me-3">
+            <div class="col-md-3">
+              <div class="card" style="width: 18rem;">
+                <div class="spk-img">
+                  <img src="img/Monthong.png" class="card-img-top" alt="">
+                  <ul>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=6285792881610"><i class="fa-brands fa-whatsapp"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Asun-Durian-Denpasar-102492179104839"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/asundurian.denpasar/"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-text">Monthong Bali</h5>
+                  <p class="card-text">STOCK : <b class="stock text-success">335</b></p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 mb-5 me-3">
+            <div class="col-md-3">
+              <div class="card" style="width: 18rem;">
+                <div class="spk-img">
+                  <img src="img/Daging Durian.png" class="card-img-top" alt="">
+                  <ul>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=6285792881610"><i class="fa-brands fa-whatsapp"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Asun-Durian-Denpasar-102492179104839"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/asundurian.denpasar/"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-text">Daging Durian</h5>
+                  <p class="card-text">STOCK : <b class="stock text-success">245</b></p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end Product Dashboard -->
+
+        <!-- Chart -->
+        <div class="row cht-1">
+          <div class="col-lg-5">
+            <h2>Sale</h2>
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="col-lg-5 ms-auto me-5">
+            <h2>Sale</h2>
+            <canvas id="myCharts"></canvas>
+          </div>
+        </div>
+      <!-- end Chart -->
+      </div>
+      
+      <!-- end Dashboard -->
+    </div>
+    <!-- end vertical Nav & Dasboard -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Chart-1 -->
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+          ],
+          datasets: [
+            {
+              label: "Olahan Durian",
+              data: [2, 8, 3, 17, 6, 3, 7],
+              backgroundColor: "rgba(153,205,1,0.6)",
+            },
+            {
+              label: "Durian Frozen",
+              data: [0, 2, 6, 5, 2, 1, 10],
+              backgroundColor: "rgba(155,153,10,0.6)",
+            },
+          ],
+        },
+      });
+    </script>
+
+    <!-- Chart 2 -->
+    <script>
+      var xValues = ["Durpas", "Monthong", "DagDur", "P8", "P21"];
+      var yValues = [40, 38, 44, 55, 50];
+      var barColors = ["red", "blue","green","yellow","brown"];
+
+      new Chart("myCharts", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [
+            {
+              label: "Durian",
+              backgroundColor: barColors,
+              data: yValues,
+            }
+          ]
+        },
+        options: {}
+      });
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

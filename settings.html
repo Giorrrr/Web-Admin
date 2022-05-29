@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font Awesome CSS Link -->
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.min.css" />
+
+    <!-- Boxicons CSS Link -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Link Chart -->
+    <link rel= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css"/>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+
+    <!-- Link  Chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Web Admin</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-xxl navbar-light shadow p-2" style="background-color: #A370F7;">
+        <div class="container-fluid">
+            <h4>
+                <i class="fa-solid fa-face-laugh-squint mt-2" style="color: #F3AD27;"></i>
+            </h4>
+            <a class="navbar-brand ms-2" href="index.html">Asun Durian Denpasar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex ms-auto">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn bg-primary" type="submit"><i class="fa-solid fa-magnifying-glass text-white"></i></button>
+            </form>
+            <div class="icon ms-3 text-dark">
+                <h5>
+                <i class="fa-solid fa-bell ms-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notifikasi"></i>
+                <i class="fa-solid fa-envelope ms-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Email"></i>
+                </h5>
+            </div>
+            <div class="topbar ms-4"></div>
+                <div class="dropdown iconUser ms-2 d-inline-flex">
+                    <a id="userDropdown" class="nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <span class="mt-2 nama">Giovanni Yuvens Setiawan</span>  
+                        <img class="rounded-circle ms-3" src="img/undraw_profile.svg" alt="" style="width: 35px;">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user ms-2 me-3"></i>Profile</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear ms-2 me-3"></i>Settings</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-ellipsis ms-2 me-3"></i>Activity Log</a></li>
+                        <hr>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket ms-2 me-3"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+    </nav>
+    <!-- end navbar -->
+
+    <!-- Vertical Navbar -->
+    <div class="row rounded-1">
+        <div class="col-md-2 p-4 sidebar collapse navbar-collapse" style="background-color: #1F2937;" id="sidebar">
+            <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="index.html"><i class="fa-solid fa-gauge me-3 text-secondary"></i>Dashboard</a>
+            </li>
+            <hr class="text-white">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="product.html"><i class="fa-solid fa-store me-3 text-secondary"></i>Product</a>
+            </li>
+            <hr class="text-white">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="charts.html"><i class="fa-solid fa-chart-column me-3 text-secondary"></i>Charts</a>
+            </li>
+            <hr class="text-white">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="table.html"><i class="fa-solid fa-table-cells me-3 text-secondary"></i>Table</a>
+            </li>
+            <hr class="text-white">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="settings.html"><i class="fa-solid fa-gear me-3 text-secondary"></i>Settings</a>
+            </li>
+            <hr class="text-white">
+            </ul>
+        </div>
+        <div class="col-md-2 p-4 sidebar2" style="background-color: #1F2937; height: 1400px;" id="sidebar">
+            <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="index.html"><i class="fa-solid fa-gauge me-3 text-secondary"></i>Dashboard</a>
+            </li>
+            <hr class="text-white">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="product.html"><i class="fa-solid fa-store me-3 text-secondary"></i>Product</a>
+            </li>
+            <hr class="text-white">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="charts.html"><i class="fa-solid fa-chart-column me-3 text-secondary"></i>Charts</a>
+            </li>
+            <hr class="text-white">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="table.html"><i class="fa-solid fa-table-cells me-3 text-secondary"></i>Table</a>
+            </li>
+            <hr class="text-white">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="settings.html"><i class="fa-solid fa-gear me-3 text-secondary"></i>Settings</a>
+            </li>
+            <hr class="text-white">
+            </ul>
+        </div>
+    <!-- end Vertical Navbar -->
+    
+        <!-- Product -->
+        <div class="col-md-9 mt-3 ms-3">
+            <h1><i class="fa-solid fa-gear me-3"></i>Settings</h1>
+            <hr>
+            <div class="d-flex justify-content-between flex-wrap align-items-center mb-5">
+                <button type="button" class="btn btn-primary ms-5"><i class="fa-solid fa-plus me-3"></i>New</button>
+                <div class="btn">
+                    <button type="button" class="btn btn-primary"><i class="fa-solid fa-calendar"></i></button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary"><i class="fa-solid fa-list-check me-2"></i>Reports</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-store me-4"></i>Product</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-4"></i>Customers</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-bag-shopping me-4"></i>Orders</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-tv me-4"></i>Console</a></li>
+                            <hr>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-list-check me-4"></i>All Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-8">
+                    <div class="sectionA1 shadow p-3 mb-5 bg-body rounded me-5 ms-3">
+                        <h2 class="m-3">General Information</h2>
+                        <form action="" method="post">
+                            <div class="row m-2">
+                                <div class="col-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control mb-3" id="firstName" placeholder="Enter your first name">
+                                    <label for="birthday" class="form-label">Birthday</label>
+                                    </i><input type="date" class="form-control mb-3" id="birthday" placeholder="">
+                                    <label for="email" class="form-label">Email</label>
+                                    </i><input type="email" class="form-control mb-3" id="email" placeholder="name@company.com">
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control mb-3" id="lastName" placeholder="Also your last name">
+                                    <label for="gender" class="form-label">Gender</label>
+                                    <select name="gender" id="gender" class="form-control mb-3">
+                                        <option selected>Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                    <label for="phone" class="form-label">Phone</label>
+                                    </i><input type="number" class="form-control mb-3" id="phone" placeholder="+62 809 4372 5473">
+                                </div>
+                            </div>
+                            <h2 class="m-3">Location</h2>
+                            <div class="row m-2">
+                                <div class="col-9 mb-3">
+                                    <label for="address" class="form-label">Address</label>
+                                    </i><input type="text" class="form-control mb-3" id="address" placeholder="Enter your home address">
+                                </div>
+                                <div class="col-3 mb-3">
+                                    <label for="number" class="form-label">Number</label>
+                                    </i><input type="number" class="form-control mb-3" id="number" placeholder="">
+                                </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="col-4 mb-3">
+                                    <label for="city" class="form-label">City</label>
+                                    </i><input type="text" class="form-control mb-3" id="city" placeholder="City">
+                                </div>
+                                <div class="col-4 mb-3">
+                                    <label for="state" class="form-label">State</label>
+                                    <select class="form-select w-100 mb-0" id="state" name="state" aria-label="State select example">
+                                        <option selected>State</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="DC">District Of Columbia</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                                <div class="col-4 mb-3">
+                                    <label for="zip" class="form-label">ZIP</label>
+                                    </i><input type="text" class="form-control mb-3" id="zip" placeholder="ZIP">
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary ms-3">Save All</button>
+                        </form>
+                    </div>
+                    <div class="sectionA2 card card-body shadow p-5 mb-5 bg-body rounded me-5 ms-3">
+                        <h2 class="h5 mb-3">Alerts & Notifications</h2>
+                        <ul class="list-group list-group-flush mt-3">
+                            <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom">
+                                <div>
+                                    <h3 class="h6 mb-1">Company News</h3>
+                                    <p class="small pe-4">Get Rocket news, announcements, and product updates</p>
+                                </div>
+                                <div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="user-notification-1">
+                                        <label class="form-check-label" for="user-notification-1"></label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom">
+                                <div>
+                                    <h3 class="h6 mb-1">Account Activity</h3>
+                                    <p class="small pe-4">Get important notifications about you or activity you've missed</p>
+                                </div>
+                                <div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="user-notification-2" checked>
+                                        <label class="form-check-label" for="user-notification-2"></label>
+                                    </div>                                            
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                <div>
+                                    <h3 class="h6 mb-1">Meetups Near You</h3>
+                                    <p class="small pe-4">Get an email when a Dribbble Meetup is posted close to my location</p>
+                                </div>
+                                <div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="user-notification-3" checked>
+                                        <label class="form-check-label" for="user-notification-3"></label>
+                                    </div> 
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="sectionB1 shadow mb-5 bg-body rounded">
+                        <img src="img/background.jpeg" class="card-img-top" alt="" style="max-width: 120%;">
+                        <div class="card-body">
+                            <div class="avatar d-flex justify-content-center mt-5 mb-3">
+                                <img src="img/human1.png" alt="" class="avatar rounded-circle position-absolute">
+                            </div>
+                            <div class="d-flex justify-content-center text">
+                                <h4 class="h3">James Bond</h4>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <h5 class="fw-normal">Senior Software Engineer</h5>
+                            </div>
+                            <div class="d-flex justify-content-center mt-1">
+                                <h4 class="h5" style="color: #6C757D;">New York, USA</h4>
+                            </div>
+                            <div class="d-flex justify-content-center mt-3 mb-4">
+                                <button class="btn btn-dark"><i class="fa-solid fa-user-plus me-2"></i>Connect</button>
+                                <button class="btn ms-3" style="background-color: #FFDA6A;">Send Message</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sectionB2 shadow p-3 mb-5 bg-body rounded">
+                        <h2 class="h3 mb-4">Select profile photo</h2>
+                        <div class="d-flex justify-content-center mt-3 mb-4">
+                            <img src="img/human1.png" alt="" class="rounded" style="width: 100px;">
+                            <div class="text ms-4">
+                                <div class="d-flex justify-content-center">
+                                    <div class="icon mt-4">
+                                        <i class="fa-solid fa-paperclip" style="rotate: 135deg; scale: 3; color: #6C757D;"></i>
+                                    </div>
+                                    <div class="fw-normal text-dark mb-1 ms-3">
+                                        Choose Image
+                                        <br>
+                                        <div class="lnk mt-2">
+                                            <a href="#" style="text-decoration: none; color: black;">JPG, GIF or PNG. Max size of 800K</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sectionB3 shadow p-3 mb-5 bg-body rounded">
+                        <h2 class="h3 mb-4">Select cover photo</h2>
+                        <div class="d-flex justify-content-center mt-3 mb-4">
+                            <img src="img/background.jpeg" alt="" class="rounded" style="width: 100px;">
+                            <div class="text ms-4">
+                                <div class="d-flex justify-content-center">
+                                    <div class="icon mt-4">
+                                        <i class="fa-solid fa-paperclip" style="rotate: 135deg; scale: 3; color: #6C757D;"></i>
+                                    </div>
+                                    <div class="fw-normal text-dark mb-1 ms-3">
+                                        Choose Image
+                                        <br>
+                                        <div class="lnk mt-2">
+                                            <a href="#" style="text-decoration: none; color: black;">JPG, GIF or PNG. Max size of 800K</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- end Product -->
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
